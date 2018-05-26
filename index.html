@@ -42,21 +42,46 @@
 	}
 
 </script>
-
+<head>
+  <meta charset="UTF-8"/>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <title> Mini-Drones: central de comando</title>
 </head>
 <body>
-<form action="." method="POST" enctype="multipart/form-data">
-<table class="tableForm">
-	<tr>
-		<td><input type="button" id="linearButton" value="Linear" onclick="sendCommand('linear');"/></td>
-	</tr>
-	<tr>
-		<td><input type="button" id="zigzagButton" value="ZigZag" onclick="sendCommand('zigzag');"/></td>
-	</tr>
-	<tr>
-		<td><input type="button" id="loopButton" value="Loop" onclick="sendCommand('loop');"/></td>
-	</tr>
-</table>
-</form>
+  <h1> Mini-Drones</h1>
+  <h2>Central de Comando</h2>
+
+  <form action="." method="POST" enctype="multipart/form-data">
+
+    <table class="tableForm">
+      <thead>
+      	<tr>
+          <td>Um Drone</td>
+          <td>Dois Drones</td>
+          <td>Dois Drones</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+      		<td><input type="button" id="demoButton" value="Demo" onclick="sendCommand('demo');"/></td>
+      		<td><input type="button" id="espiralButton" value="Espiral" onclick="sendCommand('espiral');"/></td>
+      		<td><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="sendCommand('esquadrilha');"/></td>
+      	</tr>
+        <tr>
+          <td>Uma pequena demonstração de todos os movimento</td>
+          <td>Coordenação de ambos os drones formando uma harmoniosa espiral</td>
+          <td>Um drone seguirá o outro, repetindo todos os seus movimentos</td>
+        </tr>
+      <tbody>
+    </table>
+
+    <input type="button" id="confirmaButton" value="Confirma"/></td>
+
+    <p id="status"> Executando Movimento</p>
+
+  </form>
+
+
 </body>
 </html>
