@@ -1,34 +1,12 @@
 <html>
 <head>
- <title>Drone-Comando</title>
- <meta charset="UTF-8">
-
-<script>
-	var droneId = 'drone1'
-	var secret = 'dr0neRulez2A5T7U'
-
-	function sendCommand(command){
-		var xmlhttp = new XMLHttpRequest();
-		var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + command;
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4) {
-				var jsonObject = null;
-			}
-		};
-estBean.admin = adminInput.value;
-
-		xmlhttp.open("GET", url, true);
-
-		xmlhttp.send(null);
-	}
-
-</script>
-<head>
+  <title>Drone-Comando</title>
   <meta charset="UTF-8"/>
   <link href="styles/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <title> Mini-Drones: central de comando</title>
 </head>
+
 <body>
   <h1> Mini-Drones</h1>
   <h2>Central de Comando</h2>
@@ -45,9 +23,9 @@ estBean.admin = adminInput.value;
       </thead>
       <tbody>
         <tr>
-      		<td><input type="button" id="demoButton" value="Demo" onclick="sendCommand('demo');"/></td>
-      		<td><input type="button" id="espiralButton" value="Espiral" onclick="sendCommand('espiral');"/></td>
-      		<td><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="sendCommand('esquadrilha');"/></td>
+      		<td><input type="button" id="demoButton" value="Demo" onclick="commandPressed('demo');"/></td>
+      		<td><input type="button" id="espiralButton" value="Espiral" onclick="commandPressed('espiral');"/></td>
+      		<td><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="commandPressed('esquadrilha');"/></td>
       	</tr>
         <tr>
           <td>Uma pequena demonstração de todos os movimentos</td>
@@ -57,12 +35,17 @@ estBean.admin = adminInput.value;
       <tbody>
     </table>
 
-    <input type="button" id="confirmaButton" value="Confirma"/></td>
+    <section>
+      <div>
+        <input type="button" id="confirmaButton" value="Confirma" onclick="sendCommand()"/></td>
+        <p id="status"> Executando Movimento</p></div>
+    </section>
 
-    <p id="status"> Executando Movimento</p>
+
 
   </form>
 
+<script src="scripts/main.js"></script>
 
 </body>
 </html>

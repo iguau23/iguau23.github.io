@@ -1,33 +1,27 @@
-var myHeading = document.querySelector('h1');
-myHeading.innerHTML = 'Hello world!';
+var droneId = 'drone1'
+var secret = 'dr0neRulez2A5T7U'
 
-var myImage = document.querySelector('img');
+var confirmaButton = document.getElementById("confirmaButton");
+confirmaButton.style.visibility = "hidden";
+var myCommand = "empty"
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/life.png');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
+function sendCommand(){
+  var xmlhttp = new XMLHttpRequest();
+  var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + myCommand;
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4) {
+      var jsonObject = null;
     }
+  };
+
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send(null);
+
+
 }
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
+function commandPressed(command){
+  confirmaButton.style.visibility = 'visible';
+  myCommand = command;
 
-function setUserName() {
-  var myName = prompt('Please enter your name.');
-  localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
-}
-
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
-}
-
-myButton.onclick = function() {
-  setUserName();
 }
