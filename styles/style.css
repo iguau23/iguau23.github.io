@@ -6,11 +6,10 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
 
 
-h1{
+h1 {
   text-shadow: 1px 1px 1px black;
   text-align: center;
   margin-top: 20px;

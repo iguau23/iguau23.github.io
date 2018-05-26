@@ -1,0 +1,62 @@
+<html>
+<head>
+ <title>Drone-Comando</title>
+ <meta charset="UTF-8"> 
+ 
+<script>
+	var droneId = 'drone1'
+	var secret = 'dr0neRulez2A5T7U'
+
+	function sendCommand(command){
+		var xmlhttp = new XMLHttpRequest();
+		var url = "./CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + command;	
+
+		//xmlhttp.disabledButton = document.getElementById('addButton');
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4) {
+				var jsonObject = null;
+				try{
+					//jsonObject = JSON.parse(xmlhttp.responseText);
+				}catch(ex){
+					
+				}//exception
+				//responseReceived(xmlhttp.status, jsonObject, xmlhttp.disabledButton);
+			}
+		};
+
+		//var requestBean = new Object();
+		
+		//var groupIdInput = document.getElementById('groupId');
+		//var userJidInput = document.getElementById('userJid');
+		//var adminInput = document.getElementById('admin');
+
+		//requestBean.groupId = groupIdInput.value;
+		//requestBean.userJid = userJidInput.value;
+		//requestBean.admin = adminInput.value;
+
+		xmlhttp.open("GET", url, true);
+		//xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+		xmlhttp.send(null);
+		
+		//xmlhttp.disabledButton.disabled = true;
+	}
+
+</script>
+
+</head>
+<body>
+<form action="." method="POST" enctype="multipart/form-data">
+<table class="tableForm">
+	<tr>
+		<td><input type="button" id="linearButton" value="Linear" onclick="sendCommand('linear');"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="zigzagButton" value="ZigZag" onclick="sendCommand('zigzag');"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="loopButton" value="Loop" onclick="sendCommand('loop');"/></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

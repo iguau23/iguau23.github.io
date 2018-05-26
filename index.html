@@ -9,36 +9,17 @@
 
 	function sendCommand(command){
 		var xmlhttp = new XMLHttpRequest();
-		var url = "./CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + command;
-
-		//xmlhttp.disabledButton = document.getElementById('addButton');
+		var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + command;
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 4) {
 				var jsonObject = null;
-				try{
-					//jsonObject = JSON.parse(xmlhttp.responseText);
-				}catch(ex){
-
-				}//exception
-				//responseReceived(xmlhttp.status, jsonObject, xmlhttp.disabledButton);
 			}
 		};
-
-		//var requestBean = new Object();
-
-		//var groupIdInput = document.getElementById('groupId');
-		//var userJidInput = document.getElementById('userJid');
-		//var adminInput = document.getElementById('admin');
-
-		//requestBean.groupId = groupIdInput.value;
-		//requestBean.userJid = userJidInput.value;
-		//requestBean.admin = adminInput.value;
+estBean.admin = adminInput.value;
 
 		xmlhttp.open("GET", url, true);
-		//xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
-		xmlhttp.send(null);
 
-		//xmlhttp.disabledButton.disabled = true;
+		xmlhttp.send(null);
 	}
 
 </script>
@@ -69,7 +50,7 @@
       		<td><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="sendCommand('esquadrilha');"/></td>
       	</tr>
         <tr>
-          <td>Uma pequena demonstração de todos os movimento</td>
+          <td>Uma pequena demonstração de todos os movimentos</td>
           <td>Coordenação de ambos os drones formando uma harmoniosa espiral</td>
           <td>Um drone seguirá o outro, repetindo todos os seus movimentos</td>
         </tr>
