@@ -1,16 +1,30 @@
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-  background: url(sky.JPG) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+}
+
+html, body, .viewport {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+}
+
+.text{
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 24px;
+}
+.text2{
+  color: #ffffff;
+  font-size: 28px;
+  margin-left:15%;
+  margin-top: 20px;
+  text-align:left;
+
 }
 
 
 h1 {
-
   text-align: center;
   margin-top: 20px;
   color: #78909c;
@@ -26,46 +40,181 @@ p, li {
   letter-spacing: 1px;
 }
 
-table.tableForm td{
-  font-size: 10px;
-  color: #000000;
+#bigBox{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-#demoButton, #espiralButton, #esquadrilhaButton{
-  font-size: 30px;
-  background-color: #78909c;
-  color: #fff;
-  margin-top: 5;
+#demoBox{
+  display: flex;
+  flex:auto;
+  flex-flow: column wrap;
+  background-color: #005598;
+  background-image: url('demo_pontilhado.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
 }
-#demoButton:focus,
-#espiralButton:focus,
+
+#espiralBox{
+  display: flex;
+  flex:auto;
+  flex-flow: column wrap;
+  background-color: #20A751;
+  background-image: url('espiral_pontilhado.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+}
+#esquadrilhaBox{
+  display: flex;
+  flex:auto;
+  flex-flow: column wrap;
+  background-color: #BC3F3F;
+  background-image: url('esquadrilha_pontilhado.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+}
+
+
+#demoButton{
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #E0F1FC;
+  color: #005598;
+  font-size: 46px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#demoButton:focus{
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #306D8E;
+  color: #E0F1FC;
+  font-size: 46px;
+}
+
+
+#espiralButton{
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #C0F2D1;
+  color: #20A751;
+  font-size: 46px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#espiralButton:focus{
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #268E46;
+  color: #C0F2D1;
+  font-size: 46px;
+}
+
+
+#esquadrilhaButton{
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #F4B8B8;
+  color: #BC3F3F;
+  font-size: 46px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
 #esquadrilhaButton:focus{
-  background: #212121;
+  max-width: 100%;
+  height: auto;
+
+  margin-top: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #932F2F;
+  color: #F4B8B8;
+  font-size: 46px;
+}
+
+
+
+#statusBox{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+
+#mandarButton{
+  margin-top: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  background-color: #F4D9D9;
+  color: #BC3F3F;
+  font-size: 40px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#mandarButton:focus{
+  margin-top: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  background-color: #932F2F;
+  color: #F4D9D9;
+  font-size: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#statusText{
   color: #ffffff;
-}
+  font-size: 36px;
 
-#confirmaButton{
-  margin-top: 30px;
-  font-size: 20px;
-  background-color: #1b5e20;
-  color: #ffffff;
-}
-#confirmaButton:focus{
-  background-color: #c8e6c9;
-  color: #ffffff;
-}
-
-#status{
-  margin-top: 30px;
-  float:right;
-}
+  vertical-align: sub;
 
 
-body {
-  width: 600px;
-  margin: 40 auto;
-  background-color: #eeeeee;
-  padding: 0 20px 20px 20px;
-  border: 1px solid black;
-  border-radius: 30px
 }

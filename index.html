@@ -5,43 +5,37 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <title> Mini-Drones: central de comando</title>
 </head>
 
 <body>
-  <h1> Mini-Drones</h1>
-  <h2>Central de Comando</h2>
 
+  <div class="box" id="bigBox">
+    <div class="box" id="demoBox">
+      <div class="text">Um Drone</div>
+      <div class="demo"><input type="button" id="demoButton" value="Demo" onclick="commandPressed('demo');"/></div>
+      <div class="text2">Uma pequena demonstração de todos os movimentos</div>
+    </div>
 
+    <div class="box" id="espiralBox">
+      <div class="text">Dois Drones</div>
+      <div class="myButton"><input type="button" id="espiralButton" value="Espiral" onclick="commandPressed('espiral');"/></div>
+      <div class="text2">Coordenação de ambos os drones formando uma harmoniosa espiral</div>
+    </div>
 
-  <div class="container">
-  <div class="row">
-    <div class="col">Um Drone</div>
-    <div class="col">Dois Drones</div>
-    <div class="col">Três Drones</div>
-    <div class="w-100"></div>
-
-    <div class="col"><input type="button" id="demoButton" value="Demo" onclick="commandPressed('demo');"/></div>
-    <div class="col"><input type="button" id="espiralButton" value="Espiral" onclick="commandPressed('espiral');"/></div>
-    <div class="col"><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="commandPressed('esquadrilha');"/></div>
-    <div class="w-100"></div>
-
-    <div class="col">
-      Uma pequena demonstração de todos os movimentos</div>
-    <div class="col">
-      Coordenação de ambos os drones formando uma harmoniosa espiral</div>
-    <div class="col">
-      Um drone seguirá o outro, repetindo todos os seus movimentos</div>
+    <div class="box" id="esquadrilhaBox">
+      <div class="text">Três Drones</div>
+      <div class="myButton"><input type="button" id="esquadrilhaButton" value="Esquadrilha" onclick="commandPressed('esquadrilha');"/></div>
+      <div class="text2">Um drone seguirá o outro, repetindo todos os seus movimentos</div>
+    </div>
   </div>
-</div>
 
-<section>
-  <div>
-    <input type="button" id="confirmaButton" value="Confirma" onclick="sendCommand()"/>
-    <p id="statusText">teste</p>
+  <div class="fab" id="statusBox">
+    <span id="statusText"> Preparando Drone...</span>
+    <span ><input type="button" id="mandarButton" value="Mandar" onclick="sendCommand()"/></span>
   </div>
-</section>
+
 
 
 <script src="scripts/main.js"></script>
