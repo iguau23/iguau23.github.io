@@ -50,7 +50,7 @@ p, li {
 
 #demoBox{
   display: flex;
-  flex:auto;
+  flex:1 1 100px;
   flex-flow: column wrap;
   background-color: #005598;
   background-image: url('demo_pontilhado.png');
@@ -61,7 +61,7 @@ p, li {
 
 #espiralBox{
   display: flex;
-  flex:auto;
+  flex: 1 1 100px;
   flex-flow: column wrap;
   background-color: #20A751;
   background-image: url('espiral_pontilhado.png');
@@ -71,7 +71,7 @@ p, li {
 }
 #esquadrilhaBox{
   display: flex;
-  flex:auto;
+  flex:1 1 100px;
   flex-flow: column wrap;
   background-color: #BC3F3F;
   background-image: url('esquadrilha_pontilhado.png');
@@ -182,10 +182,12 @@ p, li {
   right: 50px;
   bottom: 50px;
 }
-
+#marginDiv{
+  align-self:center;
+  margin-bottom: 10
+}
 
 #mandarButton{
-  margin-top: 10px;
   padding-right: 16px;
   padding-left: 16px;
   padding-top: 0px;
@@ -198,7 +200,7 @@ p, li {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #mandarButton:focus{
-  margin-top: 10px;
+  margin-top: 100px;
   padding-right: 16px;
   padding-left: 16px;
   padding-top: 0px;
@@ -212,9 +214,10 @@ p, li {
 
 #statusText{
   color: #ffffff;
-  font-size: 36px;
+  font-size: 32px;
 
   vertical-align: sub;
+  margin-left: 240px;
 
 
 }
