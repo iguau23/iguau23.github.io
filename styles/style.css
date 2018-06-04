@@ -84,7 +84,7 @@ p, li {
 
 #demoButton{
   width: 250px;
-  height: 120px;
+  height: 100px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -103,7 +103,7 @@ p, li {
 
   margin-top: 10px;
   width: 250px;
-  height: 120px;
+  height: 100px;
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 16px;
@@ -117,7 +117,7 @@ p, li {
 
 #espiralButton{
   width: 250px;
-  height: 120px;
+  height: 100px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -132,7 +132,7 @@ p, li {
 }
 #espiralButton:focus{
   width: 250px;
-  height: 120px;
+  height: 100px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -148,7 +148,7 @@ p, li {
 
 #esquadrilhaButton{
   width: 250px;
-  height: 120px;
+  height: 100px;
 
   margin-top: 10px;
   padding-right: 16px;
@@ -165,7 +165,7 @@ p, li {
 }
 #esquadrilhaButton:focus{
   width: 250px;
-  height: 120px;
+  height: 100px;
 
   margin-top: 10px;
   padding-right: 16px;
@@ -182,8 +182,8 @@ p, li {
 
 #statusBox{
   position: absolute;
-  right: 15px;
-  bottom: 18px;
+  right: 25px;
+  bottom: 25px;
 }
 #marginDiv{
   align-self:center;
