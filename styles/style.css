@@ -55,8 +55,9 @@ p, li {
   flex-flow: column wrap;
   background-color: #005598;
   background-image: url('demo_pontilhado.png');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
   align-items: center;
 }
 
@@ -65,9 +66,10 @@ p, li {
   flex: 1 0 100px;
   flex-flow: column wrap;
   background-color: #20A751;
-  background-image: url('espiral_pontilhado.png');
+  background-image: url('espiral_pontilhado.png') ;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
   align-items: center;
 }
 #esquadrilhaBox{
@@ -76,8 +78,9 @@ p, li {
   flex-flow: column wrap;
   background-color: #BC3F3F;
   background-image: url('esquadrilha_pontilhado.png');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
   align-items: center;
 }
 
