@@ -10,13 +10,12 @@ html {
 
 
 h1 {
-  text-shadow: 1px 1px 1px black;
+
   text-align: center;
   margin-top: 20px;
   color: #78909c;
 }
 h2  {
-  text-shadow: 1px 1px 1px black;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -35,7 +34,8 @@ table.tableForm td{
 #demoButton, #espiralButton, #esquadrilhaButton{
   font-size: 30px;
   background-color: #78909c;
-  color: #fff
+  color: #fff;
+  margin-top: 5;
 }
 #demoButton:focus,
 #espiralButton:focus,
