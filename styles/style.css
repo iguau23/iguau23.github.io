@@ -50,7 +50,7 @@ p, li {
 
 #demoBox{
   display: flex;
-  flex:1 1 100px;
+  flex:1 0 100px;
   flex-flow: column wrap;
   background-color: #005598;
   background-image: url('demo_pontilhado.png');
@@ -61,7 +61,7 @@ p, li {
 
 #espiralBox{
   display: flex;
-  flex: 1 1 100px;
+  flex: 1 0 100px;
   flex-flow: column wrap;
   background-color: #20A751;
   background-image: url('espiral_pontilhado.png');
@@ -71,7 +71,7 @@ p, li {
 }
 #esquadrilhaBox{
   display: flex;
-  flex:1 1 100px;
+  flex:1 0 100px;
   flex-flow: column wrap;
   background-color: #BC3F3F;
   background-image: url('esquadrilha_pontilhado.png');
@@ -180,7 +180,7 @@ p, li {
 
 
 #statusBox{
-  position: fixed;
+  position: absolute;
   right: 15px;
   bottom: 18px;
 }
