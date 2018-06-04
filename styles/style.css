@@ -82,8 +82,8 @@ p, li {
 
 
 #demoButton{
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 120px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -98,10 +98,11 @@ p, li {
 }
 
 #demoButton:focus{
-  max-width: 100%;
-  height: auto;
+
 
   margin-top: 10px;
+  width: 250px;
+  height: 120px;
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 16px;
@@ -114,8 +115,8 @@ p, li {
 
 
 #espiralButton{
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 120px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -129,8 +130,8 @@ p, li {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #espiralButton:focus{
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 120px;
 
   margin-top: 10px;
   padding-right: 40px;
@@ -145,14 +146,15 @@ p, li {
 
 
 #esquadrilhaButton{
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 120px;
 
   margin-top: 10px;
   padding-right: 16px;
   padding-left: 16px;
   padding-top: 16px;
   padding-bottom: 16px;
+
 
   background-color: #F4B8B8;
   color: #BC3F3F;
@@ -161,8 +163,8 @@ p, li {
 
 }
 #esquadrilhaButton:focus{
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 120px;
 
   margin-top: 10px;
   padding-right: 16px;
@@ -179,8 +181,8 @@ p, li {
 
 #statusBox{
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 15px;
+  bottom: 18px;
 }
 #marginDiv{
   align-self:center;
@@ -188,10 +190,8 @@ p, li {
 }
 
 #mandarButton{
-  padding-right: 16px;
-  padding-left: 16px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  width: 180px;
+  height: 67px;
 
   background-color: #F4D9D9;
   color: #BC3F3F;
@@ -200,11 +200,8 @@ p, li {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #mandarButton:focus{
-  margin-top: 100px;
-  padding-right: 16px;
-  padding-left: 16px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  width: 180px;
+  height: 67px;
 
   background-color: #932F2F;
   color: #F4D9D9;
@@ -214,7 +211,7 @@ p, li {
 
 #statusText{
   color: #ffffff;
-  font-size: 32px;
+  font-size: 28px;
 
   vertical-align: sub;
   margin-left: 240px;
