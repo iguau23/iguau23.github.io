@@ -17,7 +17,8 @@ html, body, .viewport {
 .text2{
   color: #ffffff;
   font-size: 28px;
-  margin-left:15%;
+  margin-left:50px;
+  margin-right: 50px;
   margin-top: 20px;
   text-align:left;
 
@@ -93,7 +94,7 @@ p, li {
 
   background-color: #E0F1FC;
   color: #005598;
-  font-size: 46px;
+  font-size: 42px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -110,7 +111,7 @@ p, li {
 
   background-color: #306D8E;
   color: #E0F1FC;
-  font-size: 46px;
+  font-size: 42px;
 }
 
 
@@ -126,7 +127,7 @@ p, li {
 
   background-color: #C0F2D1;
   color: #20A751;
-  font-size: 46px;
+  font-size: 42px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #espiralButton:focus{
@@ -141,7 +142,7 @@ p, li {
 
   background-color: #268E46;
   color: #C0F2D1;
-  font-size: 46px;
+  font-size: 42px;
 }
 
 
@@ -158,7 +159,7 @@ p, li {
 
   background-color: #F4B8B8;
   color: #BC3F3F;
-  font-size: 46px;
+  font-size: 42px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
@@ -174,7 +175,7 @@ p, li {
 
   background-color: #932F2F;
   color: #F4B8B8;
-  font-size: 46px;
+  font-size: 42px;
 }
 
 
