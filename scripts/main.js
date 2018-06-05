@@ -2,8 +2,7 @@
 var droneId = 'drone1'
 var secret = 'dr0neRulez2A5T7U'
 
-var confirmaButton = document.getElementById("confirmaButton");
-confirmaButton.style.visibility = "hidden";
+var mandarButton = document.getElementById("mandarButton");
 var myCommand = "empty"
 
 function sendCommand(){
@@ -19,7 +18,6 @@ function sendCommand(){
 }
 
 function commandPressed(command){
-  confirmaButton.style.visibility = 'visible';
   myCommand = command;
 }
 
