@@ -5,6 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="styles/videoStyle.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <title> Mini-Drones: central de comando</title>
 </head>
@@ -37,9 +38,26 @@
     <span><input type="button" id="mandarButton" value="Mandar" onclick="sendCommand()"/></span>
   </div>
 
-  <iframe width="480" height="360" id="myVideo"
-    src="https://www.youtube.com/embed/5NhLg1F9pMo">
-  </iframe>
+
+  <div class="box" id="videoBox">
+    <div class="box" id="demoVideoBox">
+      <div ><input class="myVideoButton"type="button" id="demoVideoButton" value="Video Demo" onclick="videoPressed('demo');"/></div>
+    </div>
+
+    <div class="box" id="espiralVideoBox">
+      <div ><input class="myVideoButton" type="button" id="espiralVideoButton" value="Video Espiral" onclick="videoPressed('espiral');"/></div>
+    </div>
+
+    <div class="box" id="esquadrilhaVideoBox">
+      <div><input class="myVideoButton" type="button" id="esquadrilhaVideoButton" value="Video Esquadrilha" onclick="videoPressed('esquadrilha');"/></div>
+    </div>
+  </div>
+
+  <div class="box" id="videoDiv">
+    <iframe id="myVideo"
+      src="https://www.youtube.com/embed/5NhLg1F9pMo?controls=0">
+    </iframe>
+  </div>
 
 
 <script src="scripts/main.js"></script>
