@@ -3,11 +3,17 @@ var droneId = 'drone1'
 var secret = 'dr0neRulez2A5T7U'
 
 var mandarButton = document.getElementById("mandarButton");
-var myCommand = "empty"
+var myCommand = "empty";
+var statusAtual = "Iniciando";
 
 function sendCommand(){
   var xmlhttp = new XMLHttpRequest();
-  var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + myCommand;
+  var statusButton = document.getElementById("statusButton");
+  if(statusButton.value=="Preparar"){
+    var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + "preparar";
+  }else{
+    var url = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?operation=PUSH&secret=" + secret + "&droneId=" + droneId + "&command=" + myCommand;
+  }
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4) {
       var jsonObject = null;
@@ -47,7 +53,54 @@ function getStatus(){
   var urlPeekStatus = "https://3vkeycenej.execute-api.us-east-1.amazonaws.com/prod/CIAB-2018-DroneCommandQueue?droneId=status&operation=PEEK&secret=dr0neRulez2A5T7U"
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 ) {
-      document.getElementById('statusText').innerHTML=xmlhttp.responseText;
+      var statusButton = document.getElementById("statusButton");
+      var status = xmlhttp.responseText;
+      document.getElementById('statusText').innerHTML= status;
+      if (status != statusAtual){
+        if(status =='Em manutenção'){
+          statusButton.value = "Preparar";
+          statusButton.style.fontSize = "32px";
+          statusButton.style.color = "#ffffff";
+          statusButton.style.backgroundColor = "#a09d9d";
+          statusButton.addEventListener("focus", function () {
+            statusButton.style.color = "#ffffff";
+            statusButton.style.backgroundColor = "#a09d9d";
+          });
+          statusButton.addEventListener("blur", function () {
+            statusButton.style.color = "#ffffff";
+            statusButton.style.backgroundColor = "#a09d9d";
+          });
+        }
+        else if(status=='Disponível'){
+          statusButton.value = "Preparar";
+          statusButton.style.fontSize = "32px";
+          statusButton.style.color = "#BC3F3F";
+          statusButton.style.backgroundColor = "#F4D9D9";
+          statusButton.addEventListener("focus", function () {
+            statusButton.style.color = "#F4D9D9";
+            statusButton.style.backgroundColor = "#932F2F";
+          });
+          statusButton.addEventListener("blur", function () {
+            statusButton.style.color = "#BC3F3F";
+            statusButton.style.backgroundColor = "#F4D9D9";
+          });
+         }
+         else {
+           statusButton.value = "Mandar";
+           statusButton.style.fontSize = "40px";
+           statusButton.style.color = "#BC3F3F";
+           statusButton.style.backgroundColor = "#F4D9D9";
+           statusButton.addEventListener("focus", function () {
+             statusButton.style.color = "#F4D9D9";
+             statusButton.style.backgroundColor = "#932F2F";
+           });
+           statusButton.addEventListener("blur", function () {
+             statusButton.style.color = "#BC3F3F";
+             statusButton.style.backgroundColor = "#F4D9D9";
+           });
+         }
+        statusAtual = status;
+      }
     }
   };
 
