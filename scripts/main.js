@@ -85,7 +85,7 @@ function getStatus(){
             statusButton.style.backgroundColor = "#F4D9D9";
           });
          }else if(status=='Pronto! Aguardando comando') {
-           statusButton.value = "Mandar";
+           statusButton.value = "Enviar";
            statusButton.style.fontSize = "40px";
            statusButton.style.color = "#BC3F3F";
            statusButton.style.backgroundColor = "#F4D9D9";
@@ -98,7 +98,7 @@ function getStatus(){
              statusButton.style.backgroundColor = "#F4D9D9";
            });
          } else{
-           statusButton.value = "Mandar";
+           statusButton.value = "Enviar";
            statusButton.style.fontSize = "40px";
            statusButton.style.color = "#ffffff";
            statusButton.style.backgroundColor = "#a09d9d";
@@ -114,56 +114,6 @@ function getStatus(){
 
         statusAtual=status;
       }
-
-      //
-      // if(status =='Aguardando'){
-      //   statusButton.value = "Preparar";
-      //   statusButton.style.fontSize = "32px";
-      //   statusButton.style.color = "#ffffff";
-      //   statusButton.style.backgroundColor = "#a09d9d";
-      //   statusButton.addEventListener("focus", function () {
-      //     statusButton.style.color = "#ffffff";
-      //     statusButton.style.backgroundColor = "#a09d9d";
-      //   });
-      //   statusButton.addEventListener("blur", function () {
-      //     statusButton.style.color = "#ffffff";
-      //     statusButton.style.backgroundColor = "#a09d9d";
-      //   });
-      // }
-      // else if(status=='Disponível'){
-      //   statusButton.value = "Preparar";
-      //   statusButton.style.fontSize = "32px";
-      //   statusButton.addEventListener("focus", function () {
-      //     statusButton.style.color = "#F4D9D9";
-      //     statusButton.style.backgroundColor = "#932F2F";
-      //   });
-      //   statusButton.addEventListener("blur", function () {
-      //     statusButton.style.color = "#BC3F3F";
-      //     statusButton.style.backgroundColor = "#F4D9D9";
-      //   });
-      //  }else if(status=='Pronto! Aguardando comando') {
-      //    statusButton.value = "Mandar";
-      //    statusButton.style.fontSize = "40px";
-      //    statusButton.addEventListener("focus", function () {
-      //      statusButton.style.color = "#F4D9D9";
-      //      statusButton.style.backgroundColor = "#932F2F";
-      //    });
-      //    statusButton.addEventListener("blur", function () {
-      //      statusButton.style.color = "#BC3F3F";
-      //      statusButton.style.backgroundColor = "#F4D9D9";
-      //    });
-      //  } else{
-      //    statusButton.value = "Mandar";
-      //    statusButton.style.fontSize = "40px";
-      //    statusButton.addEventListener("focus", function () {
-      //      statusButton.style.color = "#ffffff";
-      //      statusButton.style.backgroundColor = "#a09d9d";
-      //    });
-      //    statusButton.addEventListener("blur", function () {
-      //      statusButton.style.color = "#ffffff";
-      //      statusButton.style.backgroundColor = "#a09d9d";
-      //    });
-      // }
     }
   };
 
